@@ -21,31 +21,35 @@ class MyHomePage extends StatelessWidget {
   // final List<Transaction> transactions = [
   // ];
 
-  // String titleImput; 
-  // String amountInput; 
+  // String titleImput;
+  // String amountInput;
 
-  final titleController = TextEditingController(); 
-  final amountController = TextEditingController(); 
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter Demo '),
-        ),
-        body: Column(
-            //mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Container(
-                width: double.infinity,
-                child: Card(
-                  color: Colors.blue,
-                  child: Text('CHART'),
-                  elevation: 5,
+      appBar: AppBar(
+        title: Text('Flutter Demo '),
+      ),
+      body:  SingleChildScrollView(
+              child: Column(
+              //mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Container(
+                  width: double.infinity,
+                  child: Card(
+                    color: Colors.blue,
+                    child: Text('CHART'),
+                    elevation: 5,
+                  ),
                 ),
-              ),
-              UserTransaction()
-            ]));
+                UserTransaction()
+              ]),
+      ),
+      
+    );
   }
 }
