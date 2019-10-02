@@ -20,8 +20,7 @@ class TransactionList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 300,
-      child: SingleChildScrollView(
-              child: Column(
+      child:Column(
           children: transactions.map((tran) {
             return Card(
                 child: Row(
@@ -44,7 +43,8 @@ class TransactionList extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       tran.tile,
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       DateFormat('dd/MM/yyyy').format(tran.date),
@@ -56,7 +56,7 @@ class TransactionList extends StatelessWidget {
             ));
           }).toList(),
         ),
-      ),
+      
     );
   }
 }
